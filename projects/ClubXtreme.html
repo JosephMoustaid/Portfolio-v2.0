@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../animatedCursor.css">
+    <link rel="stylesheet" href="../scroll-down-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="../images/_51c75ae5-dbc9-4096-a010-a1357c9b9d94-removebg-preview.png" sizes="24x24" type="image/png">
+    <link rel="icon" href="../images/_51c75ae5-dbc9-4096-a010-a1357c9b9d94-removebg-preview.png" sizes="40x40" type="image/png">
+
+</head>
+<body class="animatedCursor">
+<main class="page animatedCursor">
+    <div class="cursor">
+        <div class="cursor__point"></div>
+        <div class="cursor__circle"></div>
+    </div>
+    <div class="offcanvas offcanvas-start show"  style="width:70%;" ata-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+        <div class="offcanvas-body">
+            <div class="scrolling-images">
+                <img src="../images/ClubXtreme.png" alt="No preview available"><hr>
+                <img src="../images/CMS.png" alt="No preview available"><hr>
+                <img src="../images/profile.png" alt="No preview available"><hr>
+                <img src="../images/userInfo.png" alt="No preview available">
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end show" style="width:30%;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <a href="#" class="custom-button" id="goBack"><i class="bi bi-arrow-left"></i></a>
+            <div><a href="#" title="prev project" class="" id="goBack"><i  class="bi bi-arrow-left"></i></a> / <a href="#" title="next project" class="" id="goBack"><i class="bi bi-arrow-right"></i></a></div>
+        </div>
+        <div class="offcanvas-body">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">ClubXtreme</h5> <br>
+            <h6 class="tech-stack">#PHP, #JAVASCRIPT, #SCSS, #HTML, #BOOTSTRAP </h6> <br>
+            <section>
+                <h1>ClubXtreme - Sports Club Management Platform</h1>
+                <p>Developed ClubXtreme, a comprehensive web platform for managing sports clubs. It features member management, event scheduling, transaction tracking, and training sessions, using modern technologies like HTML, CSS, JavaScript, PHP, MySQL, and SASS for an integrated, user-friendly solution.</p>
+                
+                <h2>Key Features:</h2>
+                <ul>
+                    <li><strong>Dashboard:</strong> Real-time overview of club activities, including the number of tournaments, events, and transactions for the month, plus new subscriber details.</li>
+                    <li><strong>Member Management:</strong> Interface to add, update, and delete member information, and view new subscriber details like name, email, and phone number.</li>
+                    <li><strong>Events:</strong> Plan and manage sports events, allowing administrators to create, modify, or cancel events. Users can register and follow upcoming events.</li>
+                    <li><strong>Transactions:</strong> Track financial transactions with a clear interface to view received payments and expenditures, aiding in precise accounting.</li>
+                    <li><strong>Training Sessions:</strong> Organize training sessions with an interactive calendar. Users can view schedules and sign up based on availability.</li>
+                    <li><strong>Reports:</strong> Generate detailed reports on club activities, including participation statistics, financial performance, and other important metrics.</li>
+                </ul>
+            <section>
+
+            <a href="." class="nav-link custom-button navLinks" aria-current="page">Visit</a>
+        </div>
+    </div>
+</main>
+ <script>
+        document.getElementById('goBack').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            window.history.back(); // Go back to the previous page
+        });
+</script>
+<script src="../animatedCursor"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="../index.js"></script>
+<script src="../cursorAnimation.js"></script>
+<script>
+    
+    var wrapperMenu = document.querySelector('.wrapper-menu');
+    wrapperMenu.addEventListener('click', function(){
+      wrapperMenu.classList.toggle('open');  
+    })
+    //-----------------------scroll animation---------------------------
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+        var reveals = document.querySelectorAll('.scroll');
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 80;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            } else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    //---------------------scroll animation END-------------------------
+
+</script>
+<script src="../animatedCursor2.js"></script>
+</body>
+</html>

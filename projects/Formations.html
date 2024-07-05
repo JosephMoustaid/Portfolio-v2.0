@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../animatedCursor.css">
+    <link rel="stylesheet" href="../scroll-down-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="../images/_51c75ae5-dbc9-4096-a010-a1357c9b9d94-removebg-preview.png" sizes="24x24" type="image/png">
+    <link rel="icon" href="../images/_51c75ae5-dbc9-4096-a010-a1357c9b9d94-removebg-preview.png" sizes="40x40" type="image/png">
+
+</head>
+<body class="animatedCursor">
+<main class="page animatedCursor">
+    <div class="cursor">
+        <div class="cursor__point"></div>
+        <div class="cursor__circle"></div>
+    </div>
+    <div class="offcanvas offcanvas-start show"  style="width:70%;" ata-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+        <div class="offcanvas-body">
+            <div class="scrolling-images">
+                <img src="../images/formations.png" alt="No preview available"> <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end show" style="width:30%;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <a href="#" class="custom-button" id="goBack"><i class="bi bi-arrow-left"></i></a>
+            <div><a href="#" title="prev project" class="" id="goBack"><i  class="bi bi-arrow-left"></i></a> / <a href="#" title="next project" class="" id="goBack"><i class="bi bi-arrow-right"></i></a></div>
+        </div>
+        <div class="offcanvas-body">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Formations</h5> <br>
+            <h6 class="tech-stack">#C++ </h6> <br>
+            <p>
+                Built a dynamic website that provides articles , news , tutorials and more.
+                It provides a platform for users to share their knowledge and help others.
+                The website was built to provide a authentificated source of information , propaganda free.
+            </p>
+            <a href="." class="nav-link custom-button navLinks" aria-current="page">Visit</a>
+        </div>
+    </div>
+</main>
+ <script>
+        document.getElementById('goBack').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            window.history.back(); // Go back to the previous page
+        });
+</script>
+<script src="../animatedCursor"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="../index.js"></script>
+<script src="../cursorAnimation.js"></script>
+<script>
+    
+    var wrapperMenu = document.querySelector('.wrapper-menu');
+    wrapperMenu.addEventListener('click', function(){
+      wrapperMenu.classList.toggle('open');  
+    })
+    //-----------------------scroll animation---------------------------
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+        var reveals = document.querySelectorAll('.scroll');
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 80;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            } else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    //---------------------scroll animation END-------------------------
+
+</script>
+<script src="../animatedCursor2.js"></script>
+</body>
+</html>
