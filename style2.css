@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+body{
+  max-width: 1400px ;
+  margin: auto;
+}
 @keyframes slideIn {
   0% {
       opacity: 0;
@@ -181,7 +185,7 @@ text-decoration: none;
   text-transform: uppercase;
 }
 .home__titles--tiltle{
-  font-size: 80px;
+  font-size: 50px;
   letter-spacing: 3px;
 }
 .home__titles--helper{
@@ -323,7 +327,7 @@ text-decoration: none;
 /*extra large screen*/
 @media(min-width:1200px){
   .home__titles--tiltle{
-    font-size: 80px;
+    font-size: 60px;
   }
   .home__titles--helper{
     font-size: 20px;
@@ -608,6 +612,11 @@ nav{
     box-sizing: border-box;
     width: 80%;
   }
+  .card-shadow {
+    box-shadow: 0 .8rem 1.4rem rgba(91, 125, 124, 0.15);
+    border-radius: 25px;
+  }
+  
   #portfolio1 {
     grid-column: span 3;
     grid-row: span 2;
@@ -643,6 +652,16 @@ nav{
   #recipeIdea{
     grid-column: span 4;
     grid-row: span 2;
+  }
+  #immerse{
+    grid-column: span 8;
+    grid-row: span 3;
+    max-height: 450px;
+  }
+  #pharmaIQ{
+    grid-column: span 8;
+    grid-row: span 3;
+    max-height: 450px;
   }
   @media(max-width:599px){
     .card-grid{
@@ -680,6 +699,14 @@ nav{
       grid-row: span 2;
     }
     #products{
+      grid-column: span 8;
+      grid-row: span 2;
+    }
+    #immerse{
+      grid-column: span 8;
+      grid-row: span 2;
+    }
+    #pharmaIQ{
       grid-column: span 8;
       grid-row: span 2;
     }
@@ -958,14 +985,14 @@ nav{
 }
 
 #image-background, .image-background{
-  background-image:url(gifs/circle.gif) !important;
+  /* background-image:url(gifs/circle.gif) !important; */
   /*background-attachment: fixed;*/
-  background-position: 50%;
-  background-size: cover;
-  background-position:center ;
-  background-color:black; 
-  background-size: 50%;
-  background-repeat:no-repeat ;
+  /* background-position: 50%; */
+  /* background-size: cover;*/
+  /* background-position:center ; */
+  background-color:black;  
+  /* background-size: 50%; */
+  /*background-repeat:no-repeat ;*/
 }
 .image-background2{
   background: linear-gradient(180deg, #000000, #0a192f);

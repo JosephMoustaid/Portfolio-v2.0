@@ -17,7 +17,7 @@ function showContent(id) {
     // Add 'active' class to the selected sidebar item
     document.getElementById(id + '-tab').classList.add('active');
 }
-
+showContent("upstatement");
 // Show the first content item by default
 document.addEventListener('DOMContentLoaded', () => {
     showContent('upstatement');
